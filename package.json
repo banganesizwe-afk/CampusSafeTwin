@@ -1,0 +1,10 @@
+{
+  "name": "campussafe-twin",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "dev": "echo 'Run npm run dev in server and client terminals.'",
+    "test": "npm --prefix server test"
+  }
+}

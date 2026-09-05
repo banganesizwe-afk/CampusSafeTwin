@@ -1,0 +1,17 @@
+{
+  "name": "CampusSafe Twin",
+  "short_name": "CampusSafe",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#152b4f",
+  "description": "Academic campus safety digital twin prototype for NWU Potchefstroom Campus.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
