@@ -27,6 +27,10 @@ The Technical Specification is treated as the technology authority where older b
 9. Safer-route recommendation using the same valid incident records as analytics.
 10. Deterministic practice-data reset.
 
+## Complete project archive
+
+`CampusSafeTwin_Final.zip` contains the complete frontend, backend, database scripts, tests and documentation used for deployment.
+
 ## Demo accounts
 
 After seeding:
@@ -78,26 +82,12 @@ cd server
 npm run db:reset
 ```
 
-Resetting twice recreates the same incident set and therefore the same headline analytics counts. Timestamps are seeded relative to the reset time so the reports remain inside the configured analytics/routing windows.
+Resetting twice recreates the same incident set and therefore the same headline analytics counts.
 
 ## Important prototype boundary note
 
-The repository contains a **defined demonstration polygon and hand-curated path graph centred on the NWU Potchefstroom Campus** so the prototype is runnable immediately. The supplied specifications require a single agreed campus boundary but do not provide its final vertex coordinates. Replace the polygon/path nodes in `server/db/002_seed.sql` if the project manager approves a different exact working area.
+The repository contains a defined demonstration polygon and hand-curated path graph centred on the NWU Potchefstroom Campus so the prototype is runnable immediately. The supplied specifications require a single agreed campus boundary but do not provide its final vertex coordinates. Replace the polygon/path nodes in `server/db/002_seed.sql` if the project manager approves a different exact working area.
 
 ## Verification status
 
-The source package has been statically checked in the build environment. The server JavaScript passes `node --check`; the routing, JWT and status-lifecycle unit tests pass; and all React/JavaScript source files parse without syntax errors. A full browser-to-PostGIS integration run still has to be performed on a machine with npm dependencies and PostgreSQL/PostGIS available. Run the checks in `docs/Test_Plan.md` before the formal demonstration.
-
-## Public deployment
-
-The code is prepared for a static React host plus a Node/PostgreSQL host. A public URL still requires credentials/accounts on the chosen hosting service, which are not stored in this repository.
-
-## Submission documentation
-
-See `docs/` for:
-
-- `User_Guide.md`
-- `Developer_Manual.md`
-- `Video_Demonstration_Script.md`
-- `Test_Plan.md`
-- `Submission_Checklist.md`
+The source package has been statically checked in the build environment. The server JavaScript passes syntax checking; the routing, JWT and status-lifecycle unit tests pass; and the React source parses without syntax errors. Run the checks in `docs/Test_Plan.md` before the formal demonstration.
